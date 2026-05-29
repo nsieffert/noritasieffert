@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/style.css">
+    <meta charset="UTF-8">
+    <title class="title">Norita</title>
+    <!--run this in the terminal:    python -m http.server 8000-->
+<!--    then open a web page and type in this: http://localhost:8000-->
+<style>
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the static by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "prev button" to the left */
+.prev {
+  left: -190px;
+  border-radius: 3px 0 0 3px;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+</style>
+</head>
+<body>
+<header>
+    <br>
+<h1>Books and more by Norita!</h1>
+<img src="../static/open%20book.png" style="width: 300px" alt="book">
+    <br>
+    <br>
+    <br>
+</header>
+<ul>
+  <li><a href="home">Home</a></li>
+  <li><a href="about">About</a></li>
+  <li><a href="fiction">Fiction</a></li>
+  <li><a href="nonfiction">Non-Fiction</a></li>
+  <li><a href="sermons">Sermons</a></li>
+  <li><a href="apologetics">Apologetics</a></li>
+  <li><a href="gallery">Gallery</a></li>
+  <li><a href="contact">Contact Us</a></li>
+</ul>
+<br>
+<div class="container">
+  <div class="left">
+      <h1>Dr. Sieffert, Pastor, Author, Speaker, Musician</h1>
+      <h3>Wife, Mother, Grandmother, Farmer</h3>
+      <h4>computer geek, coder, crocheter</h4>
+      <br>
+      <div class="item"><a href="https://www.amazon.com/author/nsieffert">
+        <img src="../static/BestSellerPic.png" style="width:800px" alt="centered"></a></div>
+      <br>
+      <p>Dr. Sieffert is the Senior Pastor at Faith Fellowship Church of the Nazarene in Texas.
+        Born number six in a family of nine, Dr. Sieffert grew up in Illinois near the Wisconsin
+      border. She married her high school sweetheart, John Sieffert, in 1982 and together they
+      have two children and six grandchildren.
+      These days Dr. Sieffert writes and speaks publically, along with dabbling in
+      website building and Python coding. She has a hobby farm with her husband and
+      they raise a cow, a goat, a couple of ponies, and a lot of chickens.</p>
+      <br>
+      <p>Watching her grandchildren growing up has been a delight, raising them up
+      in the way they should go, just as she did with her children.</p>
+      <br>
+      <br>
+      <p>-------------------------------------------------------------------------</p>
+  </div>
+  <span class="right">
+    <h3>Dr. Sieffert's Accomplishments</h3>
+    <h4>None - without Jesus in my life!</h4>
+    <br>
+    <p>Wife of Air Force Veteran</p>
+    <p>Mother of two beautiful daughters</p>
+    <p>Grandmother to six wonderful grandchildren!</p>
+    <p>Author of Twenty-Nine Books</p>
+    <p>Ordained Minister: Pastor at Church of the Nazarene</p>
+    <p>Online missionary with www.exploregod.com</p>
+    <p>Dabbler in Python, HTML, CSS, and AI</p>
+<br>
+<br>
+<span class="slideshow-container">
+    <h2>Love The Farm! - Click right to see the pics!</h2>
+      <div class="mySlides fade">
+          <div class="numbertext">1/8></div>
+          <img src="../static/barnyard.png" style="width:300px">
+          <div class="text">My Barnyard</div>
+      </div>
+        <div class="mySlides fade">
+          <div class="numbertext">2/8></div>
+          <img src="../static/moxie.png" style="width:300px">
+          <div class="text">Moxie</div>
+      </div>
+        <div class="mySlides fade">
+          <div class="numbertext">3/8></div>
+          <img src="../static/hen.png" style="width:300px">
+          <div class="text">Henny Penny</div>
+      </div>
+        <div class="mySlides fade">
+          <div class="numbertext">4/8></div>
+          <img src="../static/goat.png" style="width:300px">
+          <div class="text">Goat</div>
+      </div>
+        <div class="mySlides fade">
+          <div class="numbertext">5/6></div>
+          <img src="../static/horses.png" style="width:300px">
+          <div class="text">horses</div>
+      </div>
+        <div class="mySlides fade">
+          <div class="numbertext">6/8></div>
+          <img src="../static/flock.png" style="width:300px">
+          <div class="text">the flock</div>
+      </div>
+        <div class="mySlides fade">
+          <div class="numbertext">7/8></div>
+          <img src="../static/charmbaby.png" style="width:300px">
+          <div class="text">Babies!</div>
+      </div>
+        <div class="mySlides fade">
+          <div class="numbertext">8/8></div>
+          <img src="../static/dogscat.png" style="width:300px">
+          <div class="text">The Boss</div>
+      </div>
+
+ <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <br>
+<!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+    </div>
+</span>
+</span>
+</div>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>
+
+

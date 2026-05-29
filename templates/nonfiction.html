@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/style.css">
+    <meta charset="UTF-8">
+    <title class="title">Norita</title>
+    <!--run this in the terminal:    python -m http.server 8000-->
+<!--    then open a web page and type in this: http://localhost:8000-->
+<style>
+
+  /* Flex container */
+  .container {
+    display: flex;
+    width: 1600px;
+    border: 1px solid #ccc;
+    margin-left: 0;
+  }
+
+    /* Flex container */
+  .container2, .container3, .container4, .container5 {
+    display: flex;
+    width: 1600px;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+  }
+  /*beginning of row snippet*/
+  /* Left column */ /* this is where it starts for each row */
+  .left, .left-1, .left-2,
+  .left2-1, .left2-2, .left2-3,
+  .left3-1, .left3-2, .left3-3,
+  .left4-1, .left4-2, .left4-3,
+  .left5-1, .left5-2, .left5-3 {
+    flex: 1;
+    background: #f0f0f0;
+    padding: 10px;
+  }
+
+  /* Right column */
+  .right, .right-1, .right-2,
+  .right2-1, .right2-2, .right2-3,
+  .right3-1, .right3-2, .right3-3,
+  .right4-1, .right4-2, .right4-3,
+  .right5-1, .right5-2, .right5-3 {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease;
+  }
+
+  /* When left column is hovered, show right column */
+  .left:hover ~ .right, .left-1:hover ~ .right-1, .left-2:hover ~ .right-2,
+  .left2-1:hover ~ .right2-1, .left2-2:hover ~ .right2-2, .left2-3:hover ~ .right2-3,
+  .left3-1:hover ~ .right3-1, .left3-2:hover ~ .right3-2, .left3-3:hover ~ .right3-3,
+  .left4-1:hover ~ .right4-1, .left4-2:hover ~ .right4-2, .left4-3:hover ~ .right4-3,
+  .left5-1:hover ~ .right5-1, .left5-2:hover ~ .right5-2, .left5-3:hover ~ .right5-3 {
+    opacity: 1;
+  }
+
+  /* style items in left column */
+  .item img, .item-1 img, .item-2 img,
+  .item2-1 img, .item2-2 img, .item2-3 img,
+  .item3-1 img, .item3-2 img, .item3-3 img,
+  .item4-1 img, .item4-2 img, .item4-3 img,
+  .item5-1 img, .item5-2 img, .item5-3 img {
+    padding: 10px;
+    margin-bottom: 5px;
+    /*background: #ddd;*/
+    cursor: pointer;
+    border-radius: 25px;
+  }
+  .container .left .item:hover, .container .left-1 .item-1:hover, .container .left-2 .item-2:hover,
+  .container2 .left2-1 .item2-1:hover, .container2 .left2-2 .item2-2:hover, .container2 .left2-3 .item2-3:hover,
+  .container3 .left3-1 .item3-1:hover, .container3 .left3-2 .item3-2:hover, .container3 .left3-3 .item3-3:hover,
+  .container4 .left4-1 .item4-1:hover, .container4 .left4-2 .item4-2:hover, .container4 .left4-3 .item4-3:hover,
+  .container5 .left5-1 .item5-1:hover, .container5 .left5-2 .item5-2:hover, .container5 .left5-3 .item5-3:hover {
+      /*background: #bbb;*/
+      animation: wiggle;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-play-state: running;
+  }
+/*end of row snippet*/
+
+  /* end snippet for each book*/
+  @keyframes wiggle {
+  0%   { transform: rotate(0deg);}
+  50%  { transform: rotate(-4deg);}
+  100% { transform: rotate(0deg);}
+}
+
+  header img {
+  position: absolute;
+    width: 200px;
+  left: 600px;
+  top: 15px;
+  z-index: -1;
+}
+</style>
+</head>
+<body>
+<header>
+    <br>
+<h1>Books and more by Norita!</h1>
+<img src="../static/open%20book.png" style="width: 300px" alt="book">
+    <br>
+    <br>
+    <br>
+</header>
+
+<ul>
+  <li><a href="home">Home</a></li>
+  <li><a href="about">About</a></li>
+  <li><a href="fiction">Fiction</a></li>
+  <li><a href="nonfiction">Non-Fiction</a></li>
+  <li><a href="sermons">Sermons</a></li>
+  <li><a href="apologetics">Apologetics</a></li>
+  <li><a href="gallery">Gallery</a></li>
+  <li><a href="contact">Contact Us</a></li>
+</ul>
+<br>
+
+
+
+<!--this section start-->
+<span class="container">
+  <div class="left">
+    <div class="item"><a href="https://www.amazon.com/Daniel-A-365-Day-Devotional/dp/B0D1NPVVSF/">
+      <img src="../static/Daniel.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right">
+      <br>
+    <h4>Daniel: A One year, verse-by-verse Devotional</h4>
+      <p>A verse per day with commentary, things to consider,</p>
+      <p>and a prayer to close out the devotional.</p>
+      <p>Go deeper this year with Daniel.</p>
+  </div>
+  <div class="left-1">
+    <div class="item-1"><a href="https://www.amazon.com/dp/B0DBZ7QVYL">
+      <img src="../static/bestlife.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right-1">
+      <br>
+    <h4>Your Best Life Now</h4>
+      <p>Are you tired of being disorganized?</p>
+      <p>Out of shape physically and spiritually?</p>
+      <p>Follow this guide to get control of your life</p>
+      <p>and be an example to others!</p>
+  </div>
+  <div class="left-2">
+    <div class="item-2"><a href="https://www.amazon.com/dp/B0DRN2G3YJ/">
+      <img src="../static/becoming.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right-2">
+      <br>
+    <h4>Becoming Like Him</h4>
+      <p>The easiest discipleship book yet!</p>
+      <p>Everything laid out in order, with Scripture.</p>
+      <p>Make discipleship a priority in your life.</p>
+      <p>A great Church resource!</p>
+  </div>
+</span>
+<!--this section end-->
+
+<!--this section start-->
+<span class="container2">
+  <div class="left2-1">
+    <div class="item2-1"><a href="https://www.amazon.com/Thirty-Days-Secret-Place-Powerful/dp/B0FQ41W929/">
+      <img src="../static/30days.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right2-1">
+      <br>
+    <h4>Thirty Days in the Secret Place</h4>
+      <p>A thirty-day journey to better prayer</p>
+      <p>Practical and easy to read</p>
+      <p>Go deeper in thirty days!</p>
+  </div>
+  <div class="left2-2">
+    <div class="item2-2"><a href="https://www.amazon.com/Lyrics-Scripture-Hymns-Through-Bible/dp/B0DNT32RBQ">
+      <img src="/static/Lyrics.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right2-2">
+      <br>
+    <h4>The Lyrics of Scripture</h4>
+      <p>See beloved hymns in a new light</p>
+      <p>The stories behind the hymns plus more</p>
+      <p>Life applications that matter</p>
+      <p>Go deeper this year with hymns</p>
+  </div>
+  <div class="left2-3">
+    <div class="item2-3"><a href="https://www.amazon.com/Meditations-Mark-Norita-Sieffert-ebook/dp/B09PF7C599/">
+      <img src="../static/mark.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right2-3">
+      <br>
+    <h4>Meditations on Mark</h4>
+      <p>A verse by verse commentary</p>
+      <p>Modern day applications</p>
+      <p>Combines history, apologetics, and more!</p>
+      <p>Go deeper in Mark this year!</p>
+  </div>
+</span>
+<!--this section end-->
+
+
+<!--this section start-->
+<span class="container3">
+  <div class="left3-1">
+    <div class="item3-1"><a href="https://www.amazon.com/Meditations-Acts-Part-One-Chapters/dp/B0DFBV9VVB/">
+      <img src="../static/acts1.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right3-1">
+      <br>
+    <h4>Meditations on Acts One</h4>
+      <p>Verse by verse through chapter seven</p>
+      <p>Modern applications, apologetics, and more!</p>
+      <p>Go deeper in Acts this year!</p>
+  </div>
+  <div class="left3-2">
+    <div class="item3-2"><a href="https://www.amazon.com/dp/B0DTT8C1RC/">
+      <img src="../static/acts2.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right3-2">
+      <br>
+    <h4>Meditations on Acts Two</h4>
+      <p>Verse by verse through chapter fourteen</p>
+      <p>Modern applications, apologetics, and more!</p>
+      <p>Go deeper in Acts this year!</p>
+  </div>
+  <div class="left3-3">
+    <div class="item3-3"><a href="https://www.amazon.com/Meditations-Acts-Part-Three-Twenty-One/dp/B0FD3YZGRR/">
+      <img src="../static/acts3.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right3-3">
+      <br>
+    <h4>Meditations on Acts Three</h4>
+      <p>A verse by verse commentary through twenty-one</p>
+      <p>Modern day applications</p>
+      <p>Combines history, apologetics, and more!</p>
+      <p>Go deeper in Acts this year!</p>
+  </div>
+</span>
+<!--this section end-->
+
+<span class="container4">
+  <div class="left4-1">
+    <div class="item4-1"><a href="https://www.amazon.com/Meditations-Acts-Part-Four-Twenty-eight/dp/B0G4QWRXSR/">
+      <img src="../static/acts4.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right4-1">
+      <br>
+    <h4>Meditations on Acts Part Four</h4>
+      <p>Verse by Verse through chapter twenty-eight</p>
+      <p>Applications, apologetics, and more!</p>
+      <p>Go deeper in Acts this year!</p>
+  </div>
+  <div class="left4-2">
+    <div class="item4-2"><a href="https://www.amazon.com/Meditations-Non-Pauline-Epistles-Hebrews-Through-ebook/dp/B0BYYC2CP8">
+      <img src="../static/nonpaul.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right4-2">
+      <br>
+    <h4>Meditations on the Non-Pauline Epistles</h4>
+      <p>Verse by Verse through the books</p>
+      <p>Applications, apologetics, and more!</p>
+      <p>Go deeper in these epistles this year!</p>
+  </div>
+  <div class="left4-3">
+    <div class="item4-3"><a href="https://www.amazon.com/dp/B0DC4Q4W9C/">
+      <img src="../static/still.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right4-3">
+      <br>
+    <h4>Still Waters</h4>
+      <p>Fifty-two prayers, one per week</p>
+      <p>Many timely topics and applications</p>
+      <p>Go deeper in prayer this year!</p>
+  </div>
+</span>
+<!--this section end-->
+
+
+<!--this section start-->
+<span class="container5">
+  <div class="left5-1">
+    <div class="item5-1"><a href="https://www.amazon.com/Wise-Wicked-Learn-Selected-Women-ebook/dp/B0BZ35DDT6">
+      <img src="../static/wisewicked.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right5-1">
+      <br>
+    <h4>The Wise and the Wicked</h4>
+      <p>The Bible is filled with people</p>
+      <p>both good and bad. It's time </p>
+      <p>to get to know them better.</p>
+  </div>
+  <div class="left5-2">
+    <div class="item5-2"><a href="https://www.amazon.com/Transformed-Becoming-Christ-Like-Areas-Life/dp/1718876025/">
+      <img src="../static/transformedpurple.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right5-2">
+      <br>
+    <h4>Transformed</h4>
+      <p>This series of articles was</p>
+      <p>turned into a book designed to</p>
+      <p>help everyone go deeper.</p>
+  </div>
+  <div class="left5-3">
+    <div class="item5-3"><a href="https://www.amazon.com/Treasures-Old-New-Worshiping-Testaments-ebook/dp/B018IJ9SV6/">
+      <img src="../static/treasure.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right5-3">
+      <br>
+    <h4>Treasures Old and New</h4>
+      <p>Almost everything in the New Testament</p>
+      <p>can be found in the Old.</p>
+      <p>The Bible is much richer</p>
+    <p>than we can ever know!</p>
+  </div>
+</span>
+<!--this section end-->
+
+
+</body>
+</html>

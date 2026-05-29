@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/style.css">
+    <meta charset="UTF-8">
+    <title class="title">Norita</title>
+    <!--run this in the terminal:    python -m http.server 8000-->
+<!--    then open a web page and type in this: http://localhost:8000-->
+
+<style>
+
+form {
+    margin-left: 300px;
+    border-color: blue;
+}
+
+.contact-form {
+    border-radius: 5px;
+    background-color: lightgray;
+    padding: 20px;
+    margin-right: 200px;
+}
+label {
+    display: block;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email], select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit {
+    width: 20%;
+    height: 40px;
+    background-color: blue;
+    color: white;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.submit:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+</style>
+</head>
+<body>
+<header>
+    <br>
+<h1>Books and more by Norita!</h1>
+<img src="../static/open%20book.png" style="width: 300px" alt="book">
+    <br>
+    <br>
+    <br>
+</header>
+
+<ul>
+  <li><a href="home">Home</a></li>
+  <li><a href="about">About</a></li>
+  <li><a href="fiction">Fiction</a></li>
+  <li><a href="nonfiction">Non-Fiction</a></li>
+  <li><a href="sermons">Sermons</a></li>
+  <li><a href="apologetics">Apologetics</a></li>
+  <li><a href="gallery">Gallery</a></li>
+  <li><a href="contact">Contact Us</a></li>
+</ul>
+<br>
+
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for message in messages %}
+              <div style="color: green; font-weight: bold; margin-bottom: 15px;">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
+
+<form action="/send-message" method="POST">
+<h1>Contact Us</h1>
+<h3>We love to hear from people!</h3>
+<br>
+    <div class="contact-form">
+        <label>Name</label>
+        <input class="form-control" type="text" id="name" name="user_name">
+        <br>
+        <label>Email</label>
+        <input class="email" type="email" id="email" name="email">
+        <br>
+        <label>Note</label>
+        <input class="note" type="text" id="note" name="user_message">
+        <br>
+    </div>
+
+    <button class="submit" type="submit" name="submit">Send</button>
+
+</form>
+
+</body>
+</html>

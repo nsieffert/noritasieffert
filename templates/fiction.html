@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/style.css">
+    <meta charset="UTF-8">
+    <title class="title">Norita</title>
+    <!--run this in the terminal:    python -m http.server 8000-->
+<!--    then open a web page and type in this: http://localhost:8000-->
+<style>
+
+  /* Flex container */
+  .container {
+    display: flex;
+    width: 1600px;
+    border: 1px solid #ccc;
+    margin-left: -33px;
+  }
+
+    /* Flex container */
+  .container2, .container3 {
+    display: flex;
+    width: 1600px;
+    border: 1px solid #ccc;
+    margin-left: -10px;
+  }
+
+  /*beginning of row snippet*/
+  /* Left column */ /* this is where it starts for each row */
+  .left, .left-1, .left-2, .left2-1, .left2-2, .left2-3, .left3-1, .left3-2, .left3-3 {
+    flex: 1;
+    background: #f0f0f0;
+    padding: 1px;
+  }
+
+  /* Right column */
+  .right, .right-1, .right-2,
+  .right2-1, .right2-2, .right2-3,
+  .right3-1, .right3-2, .right3-3 {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease;
+  }
+
+  /* When left column is hovered, show right column */
+  .left:hover ~ .right, .left-1:hover ~ .right-1, .left-2:hover ~ .right-2,
+  .left2-1:hover ~ .right2-1, .left2-2:hover ~ .right2-2, .left2-3:hover ~ .right2-3,
+  .left3-1:hover ~ .right3-1, .left3-2:hover ~ .right3-2, .left3-3:hover ~ .right3-3,
+  .left4-1:hover ~ .right4-1, .left4-2:hover ~ .right4-2, .left4-3:hover ~ .right4-3 {
+    opacity: 1;
+  }
+
+  /* Optional: style items in left column */
+  .item img, .item-1 img, .item-2 img,
+  .item2-1 img, .item2-2 img, .item2-3 img,
+  .item3-1 img, .item3-2 img, .item3-3 img,
+  .item4-1 img, .item4-2 img, .item4-3 img{
+    padding: 10px;
+    margin-bottom: 5px;
+    /*background: #ddd;*/
+    cursor: pointer;
+    border-radius: 25px;
+  }
+  .container .left .item:hover, .container .left-1 .item-1:hover, .container .left-2 .item-2:hover,
+  .container2 .left2-1 .item2-1:hover, .container2 .left2-2 .item2-2:hover, .container2 .left2-3 .item2-3:hover,
+  .container3 .left3-1 .item3-1:hover, .container3 .left3-2 .item3-2:hover, .container3 .left3-3 .item3-3:hover,
+  .container4 .left4-1 .item4-1:hover, .container4 .left4-2 .item4-2:hover, .container4 .left4-3 .item4-3:hover {
+      /*background: #bbb;*/
+      animation: wiggle;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-play-state: running;
+  }
+/*end of row snippet*/
+
+  /* end snippet for each book*/
+  @keyframes wiggle {
+  0%   { transform: rotate(0deg);}
+  50%  { transform: rotate(-4deg);}
+  100% { transform: rotate(0deg);}
+}
+</style>
+<body>
+<header>
+    <br>
+<h1>Books and more by Norita!</h1>
+<img src="../static/open%20book.png" style="width: 300px" alt="book">
+    <br>
+    <br>
+    <br>
+</header>
+<ul>
+  <li><a href="home">Home</a></li>
+  <li><a href="about">About</a></li>
+  <li><a href="fiction">Fiction</a></li>
+  <li><a href="nonfiction">Non-Fiction</a></li>
+  <li><a href="sermons">Sermons</a></li>
+  <li><a href="apologetics">Apologetics</a></li>
+  <li><a href="gallery">Gallery</a></li>
+  <li><a href="contact">Contact Us</a></li>
+</ul>
+<br>
+<!--this section start-->
+<span class="container">
+  <div class="left">
+    <div class="item"><a href="https://www.amazon.com/Unprepared-Norita-Sieffert-ebook/dp/B00ZSUE1MK/">
+        <img src="../static/Unprepared.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right">
+      <br>
+      <h4>Unprepared: I didn't die today. Not sure about tomorrow. </h4>
+      <p>It was just another day for Kayla, until it wasn't.</p>
+      <p>Now she's alone and far from home.</p>
+      <p>What happened, and why?</p>
+  </div>
+  <div class="left-1">
+    <div class="item-1"><a href="https://www.amazon.com/dp/B0DC6MXNYK/">
+        <img src="../static/unprepared2.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right-1">
+      <br>
+    <h4>Unprepared: The Next Chapter</h4>
+      <p>Kayla is pregnant and barely surviving</p>
+      <p>But someone has hurt her best friend.</p>
+      <p>She is running out of time to help him.</p>
+      <p>But others have a different plan.</p>
+  </div>
+  <div class="left-2">
+    <div class="item-2"><a href="https://www.amazon.com/Morabi-Novel-Norita-Sieffert/dp/1726133508/">
+        <img src="../static/morabi.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right-2">
+      <br>
+    <h4>The Morabi</h4>
+      <p>Chief Kalavit was banished from</p>
+      <p>his island. Alone and being</p>
+      <p>followed by a tiger that</p>
+      <p> was actually something else.</p>
+      <p>Could he win his island back</p>
+      <p>before it was too late?</p>
+  </div>
+</span>
+<!--this section end-->
+
+<!--this section start-->
+<span class="container2">
+  <div class="left2-1">
+    <div class="item2-1"><a href="https://www.amazon.com/Colony-Twelve-Novel-Norita-Sieffert/dp/1726136493/">
+        <img src="../static/col12.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right2-1">
+      <br>
+    <h4>Colony Twelve</h4>
+      <p>They were just starting over</p>
+      <p>But someone had other plans
+      <p>And who was the mysterious Receiver?</p>
+  </div>
+  <div class="left2-2">
+    <div class="item2-2"><a href="https://www.amazon.com/Seer-Remmon-Novel-Norita-Sieffert/dp/1726116522/">
+        <img src="../static/remmon.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right2-2">
+      <br>
+    <h4>The Seer of Remmon</h4>
+      <p>Jolus never asked for the gift of sight</p>
+      <p>But jealously led to enslavement</p>
+      <p>What would happen to Jolus</p>
+      <p>and could he ever forgive?</p>
+  </div>
+  <div class="left2-3">
+    <div class="item2-3"><a href="https://www.amazon.com/Stone-Jirrah-Novel-Norita-SIeffert/dp/1726071294/">
+        <img src="../static/jirrah.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right2-3">
+      <br>
+    <h4>The Stone of Jirrah</h4>
+      <p>Commander Leath was captured</p>
+      <p>by his sworn enemies. But they</p>
+      <p>seemed intent on convincing him</p>
+      <p>that everything he believed
+          <p>was a lie.</p>
+      <p>Could he get away in time?</p>
+  </div>
+</span>
+<!--this section end-->
+
+
+<!--this section start-->
+<span class="container3">
+  <div class="left3-1">
+    <div class="item3-1"><a href="https://www.amazon.com/Little-Flower-Koramar-Norita-Sieffert/dp/1726072592/">
+        <img src="../static/flower.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right3-1">
+      <br>
+    <h4>Little Flower of Koramar</h4>
+      <p>Captured and sent to the king's harem</p>
+      <p>Used as a pawn in a deadly game</p>
+      <p>Would her gift of sight help her?</p>
+      <p>Or would it bring more trouble?</p>
+  </div>
+  <div class="left3-2">
+    <div class="item3-2"><a href="https://www.amazon.com/Face-My-Enemy-Norita-Sieffert/dp/1726057720/">
+        <img src="../static/Face.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right3-2">
+      <br>
+    <h4>The Face of My Enemy</h4>
+      <p>Captured due to his own failures</p>
+      <p>Imprisoned and forced to work nonstop</p>
+      <p>How could he disrupt the enemy's plans</p>
+      <p>And stop a traitor in his midst?</p>
+  </div>
+  <div class="left3-3">
+    <div class="item3-3"><a href="https://www.amazon.com/Puzzle-Norita-J-Sieffert/dp/096729990X/">
+        <img src="../static/puzzle.png" style="width:200px" alt="centered"></a></div>
+  </div>
+  <div class="right3-3">
+      <br>
+    <h4>Puzzle</h4>
+      <p>She won a piano at auction</p>
+      <p>only to find a bunch of clues.</p>
+      <p>The promised prize would be</p>
+         <p>worth it if she could just</p>
+      <p>stay alive long enough.</p>
+  </div>
+</span>
+
+</body>
+</html>
